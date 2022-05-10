@@ -1,0 +1,369 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	height: 100%;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 1.4;
+	color: #666;
+}
+
+html {
+	
+	margin: 0;
+}
+
+header {
+	
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	background: #111111;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav ul a {
+	display: block;
+	padding: 20px;
+	font-size: .9rem;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+
+
+
+.logo	{
+	display: none;
+}
+
+	
+.hamburger {
+	display: block;
+	padding: 35px;
+	cursor: pointer;
+	width: 50px;
+	margin-right: 50px;
+}
+
+.line {
+	border-bottom: 4px solid green;
+	width: 45px;
+	margin-bottom: 6px;
+}
+
+.line:last-child {
+	margin-bottom: 0;
+}
+.navigation {
+	height: 0;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	transition: height .3s linear;
+	}
+
+.open	{
+	height: 125px;
+}
+
+.close {
+	height: 0;
+}
+
+nav a {
+	border-top: 1px solid #3E3E3E;
+}
+
+
+
+nav a:hover {
+	color: lightgreen;
+}
+
+.open {
+		height: 252px;
+	}
+
+
+/* Background images ---*/
+
+.pimg1 {
+	background-image: url("../img/header.jpg");
+	min-height: 950px;
+}
+
+
+
+.pimg2 {
+	background-image: url("../img/section1.jpg");
+	min-height: 400px;
+}
+
+.pimg3 {
+	background-image: url("../img/section2.jpg");
+	min-height: 400px;
+}
+
+.pimg4 {
+	background-image: url("../img/section4.jpg");
+	min-height: 400px;
+}
+
+
+.pimg1, .pimg2, .pimg3, .pimg4	{
+	position: relative;
+	opacity: 0.70;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+
+
+/*----sections---*/
+
+.section {
+	text-align: center;
+	padding: 50px 30px;
+	font-size: 1.1
+}
+
+.section p {
+	text-align: left;
+}
+
+.section-light {
+	background-color: #f4f4f4;
+	color: #666;
+}
+
+.section-dark {
+	background-color: #282e34;
+	color: #ddd;
+}
+
+
+.ptext {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	color: #000;
+	font-size: 24px;
+	letter-spacing: 8px;
+	text-transform: uppercase;
+}
+
+.ptext .border {
+	background-color: transparent;
+	color: white;
+	padding: 20px;
+}
+
+
+.dark-container	{
+	display: flex;
+	flex-direction: column;
+}
+
+
+#green-text {
+	color: lightgreen;
+}
+
+/*---footer----*/
+
+footer {
+	background: #111111;
+	padding: 40px 80px;
+	text-align: center;
+	color: white;
+}
+
+
+
+footer a {
+	color: white;
+}
+
+.social {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.facebook {
+	margin: 0 auto;
+	width: 14px;
+	height: 27px;
+	background-image: url("../img/facebook.png");
+	background-repeat: no-repeat;
+	background-size: 14px 27px;
+}
+
+.facebook:hover	{
+	background-image: url("../img/facebook2.png");
+}
+
+.twitter {
+	margin: 0 auto;
+	width: 29px;
+	height: 23px;
+	background-image: url("../img/twitter.png");
+	background-repeat: no-repeat;
+	background-size: 29px 23px;
+}
+
+.twitter:hover	{
+	background-image: url("../img/twitter2.png");
+}
+
+.social-icon {
+ padding: 0px 10px;
+}
+
+#mail {
+	color: white;
+}
+
+#phone {
+	color: white;
+}
+
+/*----logo and pimg text for smaller screens--*/
+
+@media (max-width: 1029px) {
+	.cycle {
+	width: 100%;
+}
+}
+
+
+@media (min-width: 650px) {
+	.ptext .border {
+		background-color: #111;
+		font-size: 27px;
+	}
+}
+
+/*----navigation for wider screens---*/
+
+@media (min-width: 584px) {
+	
+	.hamburger	{
+		display: none;
+	}
+	
+	.logo {
+		display: inline-block;
+		margin-right: auto;
+		margin-left: 20px;
+	}
+	
+	nav {
+		flex-direction: row;
+		padding: 10px 0;
+	}
+	
+	nav a {
+		border-top: none;
+	}
+	
+	.navigation {
+		height: auto;
+		margin-left: auto;
+		margin-right: 50px;
+		flex-direction: row;
+	}
+	
+	.section {
+		padding: 50px 80px;
+	}
+}
+
+@media (min-width: 584px) and (max-width: 774px) {
+	nav {
+		flex-direction: column;
+	}
+	
+	
+	
+	.logo, .navigation {
+		margin: 0 auto;
+	}
+}
+
+/*---------technology section on wider screens----------*/
+
+@media (min-width: 1300px) {
+	.dark-container {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	
+	.dark1, .dark2, .dark3 {
+		flex: 1;
+		
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	
+	
+	
+	#technology {
+		padding: 50px 50px;
+	}
+}
+
+
+
+
+@media (max-width: 584px) {
+	.pimg1, .pimg2, .pimg3, .pimg4 {
+		background-attachment: scroll;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
